@@ -1,0 +1,463 @@
+/*#display{*/
+/*    height: 100vh;*/
+/*    overflow-y: auto;*/
+/*}*/
+@keyframes FadeIn{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+.modal{
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    animation: FadeIn linear 0.1s;
+    align-items: center;
+    justify-content: center;
+    display: none;
+}
+.modal__layout{
+    background-color: #F4FEE6;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+.modal__body{
+    position: relative;
+    margin: auto;
+    z-index: 1;
+    animation: growth linear 0.1s;
+}
+@keyframes growth{
+    from{
+        transform: scale(0.7);
+    }
+    to{
+        transform: scale(1);
+    }
+}
+.modal__body--signIn{
+    width: 800px;
+    height: 80%;
+    margin: auto auto;
+    background-color: #fff;
+    display: none;
+}
+.content_signIn-form{
+    display: flex;
+}
+.signIn-form-byAccount{
+    width: 400px;
+}
+.signIn-form-byAccount--content{
+    padding: 15px 15px 48px 15px;
+    background-color: #EBA22B;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.signIn-form-byAccount--title{
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 12px;
+    color: #fff;
+}
+.signIn-btn{
+    border-radius: 3px;
+}
+.signIn-faceBook{
+    width: 70%;
+    margin: auto;
+    display: flex;
+    height: 40px;
+    align-items: center;
+    border: none;
+    border-radius: 3px;
+    margin: 15px auto;
+}
+.signIn-faceBook--icon{
+    width: 50px;
+    color: #fff;
+    line-height: 40px;
+    background-color: #354F88;
+}
+.signIn-faceBook--link{
+    width: 100%;
+    text-align: left;
+    display: block;
+    line-height: 40px;
+    padding-left: 10px;
+    text-decoration: none;
+    font-size: 15px;
+    color: #fff;
+    background-color: #3B5897;
+}
+.signIn-Twitter{
+    width: 70%;
+    margin: auto;
+    display: flex;
+    height: 40px;
+    align-items: center;
+    border: none;
+}
+.sign-Twitter--icon{
+    width: 50px;
+    color: #fff;
+    line-height: 40px;
+    background-color: #4A99D5;
+}
+.signIn-Twitter--link{
+    width: 100%;
+    text-align: left;
+    display: block;
+    line-height: 40px;
+    padding-left: 10px;
+    text-decoration: none;
+    font-size: 15px;
+    color: #fff;
+    background-color: #53ABEE;
+}
+.signIn-Google{
+    width: 70%;
+    margin: auto;
+    display: flex;
+    height: 40px;
+    align-items: center;
+    border: none;
+    margin: 15px auto;
+}
+.sign-Google--icon{
+    width: 50px;
+    color: #fff;
+    line-height: 40px;
+    background-color: #C74635;
+}
+.signIn-Google--link{
+    width: 100%;
+    text-align: left;
+    display: block;
+    line-height: 40px;
+    padding-left: 10px;
+    text-decoration: none;
+    font-size: 15px;
+    color: #fff;
+    background-color: #DE4E3B;
+}
+.signIn-Gmail{
+    width: 70%;
+    margin: auto;
+    display: flex;
+    height: 40px;
+    align-items: center;
+    border: none;
+}
+.sign-Gmail--icon{
+    width: 50px;
+    color: #fff;
+    line-height: 40px;
+    background-color: #1E90C5;
+}
+.signIn-Gmail--link{
+    width: 100%;
+    text-align: left;
+    display: block;
+    line-height: 40px;
+    padding-left: 10px;
+    text-decoration: none;
+    font-size: 15px;
+    color: #fff;
+    background-color: #23A1DB;
+}
+.signIn-form-byClassical{
+    width: 400px;
+    display: flex;
+    justify-content: center;
+}
+.signIn-form-byClassical-content{
+    padding: 15px 15px 48px 15px;
+    background-color: #fff;
+
+}
+.signIn-form-byClassical-title{
+    margin-top: 38px;
+    margin-bottom: 26px;
+    text-align: center;
+}
+.signIn-form-byClassical--userName{
+    width: 260px;
+    display: flex;
+    border: 1px solid #ccc;
+    height: 40px;
+    border-radius: 3px;
+    align-items: center;
+    box-shadow: 0 0 4px rgba(0,0,0,0.25);
+}
+#byClassical--userName{
+    flex: 1;
+    border: none;
+    outline: none;
+    padding-left: 10px;
+    font-size: 12px;
+}
+.byClassical--userName-icon{
+    padding-right: 10px;
+    opacity: 0.4;
+    font-size: 12px;
+}
+.signIn-form-byClassical--email{
+    width: 260px;
+    display: flex;
+    border: 1px solid #ccc;
+    height: 40px;
+    border-radius: 3px;
+    align-items: center;
+    box-shadow: 0 0 4px rgba(0,0,0,0.25);
+    margin: 16px 0;
+}
+#byClassical--email{
+    flex: 1;
+    border: none;
+    outline: none;
+    padding-left: 10px;
+    font-size: 12px;
+}
+.byClassical--email-icon{
+    padding-right: 10px;
+    opacity: 0.4;
+    font-size: 12px;
+}
+.signIn-form-byClassical-password{
+    width: 260px;
+    display: flex;
+    border: 1px solid #ccc;
+    height: 40px;
+    border-radius: 3px;
+    align-items: center;
+    box-shadow: 0 0 4px rgba(0,0,0,0.25);
+}
+#byClassical--password{
+    flex: 1;
+    border: none;
+    outline: none;
+    padding-left: 10px;
+    font-size: 12px;
+}
+.byClassical--password-icon{
+    padding-right: 10px;
+    opacity: 0.4;
+    font-size: 12px;
+}
+.signIn-form-byClassical-submit{
+    margin-top: 15px;
+    width: 260px;
+    height: 40px;
+    color: #fff;
+
+}
+.byClassical-submit-btn{
+    width: 100%;
+    height: 100%;
+    background-color: greenyellow;
+    border: none;
+    color: #fff;
+    font-weight: 700;
+    cursor: pointer;
+}
+.modal__body--signUp{
+    width: 500px;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    box-shadow: 0 0 4px rgba(0,0,0,0.25);
+    display: none;
+    position: relative;
+}
+.content_signUp-form{
+    padding: 15px 0;
+}
+.signUp-form-heading{
+    margin-bottom: 15px;
+    font-size: 15px;
+}
+.signUp-form-inputDiv{
+    width: 400px;
+    height: 40px;
+    display: flex;
+    box-shadow: 0 0 4px rgba(0,0,0,0.25);
+    margin-bottom: 15px;
+    align-items: center;
+}
+.signUp-form-input{
+    border: none;
+    flex: 1;
+    padding-left: 10px;
+    outline: none;
+    line-height: 40px;
+}
+.signUp-form--icon{
+    padding-right: 10px;
+    opacity: 0.5;
+}
+.signUpSelectGender{
+    margin-top: 20px;
+}
+#signUpMan{
+    margin-right: 6px;
+}
+#signUpWomen{
+    margin-left: 10px;
+    margin-right: 6px;
+}
+.signUp-signUp-P{
+    width: 400px;
+    line-height: 16px;
+    font-size: 12px;
+    margin-top: 10px;
+}
+.signUp-btnS{
+    display: flex;
+    justify-content: space-between;
+}
+.signUp-form-btn.google{
+    padding-left: 0;
+    background-color: #DE4E3B;
+}
+.signUp-form-btn.google>i{
+     margin: 0 5px;
+}
+.signUp-form-btn.facebook{
+    padding-left: 0;
+    background-color: #3B5897;
+}
+.signUp-form-btn.facebook>i{
+    margin: 0 5px;
+}
+.signUp-form-btn{
+    font-size: 12px;
+    margin-top: 22px;
+    line-height: 35px;
+    padding: 0 15px;
+    background-color: #22A9F0;
+    border: none;
+    color: #fff;
+    /*border-radius: 4px;*/
+    /*float: right;*/
+    margin-bottom: 11px;
+}
+.clear{
+    clear: both;
+}
+.modal__body--signUp-close{
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 10px 15px;
+    background: #f2f2f2
+}
+.modal__body--signUp-close:hover{
+    background-color: #ccc;
+}
+#modalService{
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    animation: FadeIn linear 0.1s;
+    align-items: center;
+    justify-content: center;
+    display: none;
+}
+.open{
+    display: flex;
+}
+.modal__layout-Service{
+    background-color: rgb(0,0,0,0.4);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+.modal_bodyService{
+    position: relative;
+    margin: auto;
+    z-index: 1;
+    animation: growth linear 0.1s;
+    width: 450px;
+}
+.form-service--content{
+    background-color: #fff;
+    padding: 20px 35px 10px 35px;
+    border-radius: 4px;
+}
+.img_form-service{
+    display: flex;
+    justify-content: center;
+}
+.form-service--img{
+}
+.form-service--content h3{
+    font-size: 13px;
+    margin: 5px 0;
+    color: darkred;
+}
+.formServiceInputS{
+    outline: none;
+    border: none;
+    box-shadow:0 0 4px rgba(0,0,0,0.25);
+    height: 25px;
+    padding-left: 10px;
+}
+.formServiceSelect{
+    outline: none;
+    border: none;
+    box-shadow:0 0 4px rgba(0,0,0,0.25);
+    height: 25px;
+}
+.form-service--content h3:nth-child(10){
+     color: #F65E39;
+    font-size: 16px;
+    margin-top: 20px;
+}
+.form-service--content h3:nth-child(11){
+    color: red;
+    font-size: 13px;
+    margin-top: 10px;
+}
+#form-service--btn--save{
+    float: right;
+    height: 30px;
+    width: 60px;
+    margin-top: 20px;
+    background-color: #F65E39;
+    border: none;
+    color: #fff;
+    border-radius: 2px;
+    box-shadow:0 0 4px rgba(0,0,0,0.25);
+}
+#form-service--btn--confirm{
+    float: right;
+    height: 30px;
+    width: 90px;
+    margin-top: 20px;
+    background-color: crimson;
+    border: none;
+    color: #fff;
+    border-radius: 2px;
+    box-shadow:0 0 4px rgba(0,0,0,0.25);
+    margin-left: 10px;
+}
+#modal_bodyService--close{
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 7px 10px;
+    background-color: #f2f2f2;
+}
+#modal_bodyService--close:hover{
+    background-color: #ccc;
+}

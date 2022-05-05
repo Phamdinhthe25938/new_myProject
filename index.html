@@ -5,6 +5,8 @@
     <title>Title</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./main.css">
+    <link rel="stylesheet" href="./subb.css">
+    <link rel="stylesheet" href="./modal.css">
 </head>
 <body>
       <div class="main">
@@ -14,12 +16,7 @@
                       <div class="header_search">
                           <div class="header_feature-logo">
                               <a href="" class="header_logo-link">
-                                  <svg version="1.1" viewBox="0 0 50 50" class="header-svg" style="width: 50px; height: 50px;">
-                                      <path
-                                              pid="0"
-                                              d="M25.093 0c13.781.06 24.94 11.317 24.882 25.106C49.917 38.894 38.663 50.058 24.88 50 11.1 49.942-.059 38.683.001 24.894.057 11.106 11.31-.058 25.092 0zm11.801 31.9L14.398 16.053c.241-.26.48-.518.74-.777 2.7-2.687 5.971-4.031 9.775-4.015 3.804.015 7.064 1.388 9.741 4.098.238.241.476.482.694.743l-5.951 4.133 2.381 1.688 5.153-3.576v.02L39.33 16.7c-.692-1.203-1.584-2.325-2.616-3.39-3.231-3.292-7.167-4.947-11.788-4.967-4.6-.019-8.53 1.603-11.809 4.867a17.806 17.806 0 00-2.682 3.408l1.429 1.004 23.429 16.51c-.24.26-.48.518-.74.777-2.7 2.687-5.971 4.011-9.775 3.996-3.803-.016-7.063-1.37-9.74-4.08-.258-.26-.496-.521-.734-.782l6.111-4.251-.139-.181-2.183-1.528-5.373 3.735v-.021l-2.377 1.65a17.824 17.824 0 002.654 3.43c3.253 3.291 7.169 4.946 11.769 4.965 4.62.021 8.549-1.602 11.83-4.866 1.06-1.075 1.96-2.21 2.682-3.406l-2.383-1.67z"
-                                      ></path>
-                                  </svg>
+                                  <img style="height: 50px;width: 50px;border-radius:50% " src="https://inkythuatso.com/uploads/images/2021/09/cgv-logo-inkythuatso-14-16-34-50.jpg" alt="">
                               </a>
                           </div>
                           <div class="header_input">
@@ -215,7 +212,7 @@
                                                               <button class="calendar_day-btn">4</button>
                                                           </td>
                                                           <td>
-                                                              <button class="calendar_day-btn">5</button>
+                                                              <button style="background-color: aquamarine" class="calendar_day-btn">5</button>
                                                           </td>
                                                           <td>
                                                               <button class="calendar_day-btn">6</button>
@@ -322,11 +319,37 @@
                                                   </table>
                                               </div>
                                           </div>
+                                          <div class="header_input-date--calendar-footer">
+                                              <h4 class="date--calendar-footer-delete">Xóa</h4>
+                                              <h4 class="date--calendar-footer-apply">Áp dụng</h4>
+                                          </div>
                                       </div>
                               </div>
                               <div class="header_input-quantity">
                                   <i class="fa-solid fa-user"></i>
                                   <span>Số khách</span>
+                                  <div class="header_input-quantity--form">
+                                      <div class="header_input-quantity--form-content">
+                                          <div class="quantity--form-item">
+                                              <h4 class="quantity--form-item-title">Người lớn</h4>
+                                              <div class="quantity--form-item-change">
+
+                                              </div>
+                                          </div>
+                                          <div class="quantity--form-item">
+                                              <h4 class="quantity--form-item-title">Trẻ em</h4>
+                                              <div class="quantity--form-item-change">
+
+                                              </div>
+                                          </div>
+                                          <div class="quantity--form-item">
+                                              <h4 class="quantity--form-item-title">Trẻ sơ sinh</h4>
+                                              <div class="quantity--form-item-change">
+
+                                              </div>
+                                          </div>
+                                      </div>
+                                  </div>
                               </div>
                               <div class="header_input--btnSerach">
                                   <i class="fa-solid fa-magnifying-glass"></i>
@@ -337,22 +360,34 @@
                           <div class="header-feature-content">
                               <ul class="header_feature-list">
                                   <li class="header_feature-item" >
-                                      <a href="" class="header_feature-item--link">
+                                      <a href="javascript:void(0);" class="header_feature-item--link">
                                           Guide
                                       </a>
                                   </li>
-                                  <li class="header_feature-item" >
-                                      <a href="" class="header_feature-item--link">
-                                          Host
+                                  <li class="header_feature-item" id="header_feature-item--Notifi">
+                                      <a id="notify" href="javascript:void(0);" class="header_feature-item--link">
+                                          Thông báo
                                       </a>
+                                      <i id="notify-bell-icon" style="color: #cccccc; position: relative;top: 1px;margin-left: 4px" class="fa-solid fa-bell">
+                                          <i id="notifyQuantity">
+
+                                          </i>
+                                      </i>
+                                      <div id="header_messageDialog">
+                                          <h3 class="MessageDialogList-title">Product Ticket</h3>
+                                          <div id="header_messageDialog--content">
+
+                                          </div>
+                                      </div>
                                   </li>
+
                                   <li class="header_feature-item" >
-                                      <a href="" class="header_feature-item--link">
+                                      <a href="javascript:void(0);" id="header_feature-item-signUp" class="header_feature-item--link">
                                          Đăng kí
                                       </a>
                                   </li>
-                                  <li class="header_feature-item" >
-                                      <a href="" class="header_feature-item--link">
+                                  <li id="header_feature-item-signIn" class="header_feature-item" >
+                                      <a href="javascript:void(0);" class="header_feature-item--link">
                                           Đăng nhập
                                       </a>
                                   </li>
@@ -362,40 +397,357 @@
                                   <span>VND</span>
                                   <i class="fa-solid fa-caret-down"></i>
                               </div>
+                              <div style="display: flex;align-items: center" id="display_account-user"></div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+<!--          CONTENT-->
+
+          <div id="content">
+              <div class="grid">
+                  <div class="grid_row">
+                      <div class="grid_colum-2-6">
+                          <div class="category-content">
+                              <nav class="nav-list">
+                                  <div class="category__heading">
+                                      <h3>
+                                          <i class="category__heading-icon fas fa-list"></i>
+                                          Danh mục
+                                      </h3>
+                                  </div>
+                                  <ul class="category-list">
+                                      <li class="category-list-item" id="introduce">
+                                          <a href="javascript:void(0);" class="category-item--link">Giới thiêu</a>
+                                      </li>
+                                      <li class="category-list-item">
+                                          <a href="javascript:void(0);" class="category-item--link">Vị trí rạp trên map</a>
+                                      </li>
+                                      <li class="category-list-item">
+                                          <a href="javascript:void(0);" class="category-item--link">Chương trình ưu đãi</a>
+                                      </li>
+                                      <li class="category-list-item" id="history-buyTicket">
+                                          <a href="javascript:void(0);" class="category-item--link">Lịch sử mua vé</a>
+                                      </li>
+                                      <li class="category-list-item">
+                                          <a href="javascript:void(0);" class="category-item--link">Dịch vụ</a>
+                                      </li>
+                                  </ul>
+                              </nav>
+                              <img src="" alt=""style="width: 100%;border-radius: 3px" class="first-adver__content-img">
+                              <img src="" alt="" style="width: 100%;border-radius: 3px" class="second-adver__content-img">
+                              <img src="" alt="" style="width: 100%;border-radius: 3px" class="third-adver__content-img">
+                              <img src="" alt="" style="width: 100%;border-radius: 3px" class="four-adver__content-img">
+                              <img src="" alt="" style="width: 100%;border-radius: 3px" class="five-adver__content-img">
+                              <img src="" alt="" style="width: 100%;border-radius: 3px" class="six-adver__content-img">
+                          </div>
+                      </div>
+                      <div class="grid_colum-10-6">
+                           <div class="show-product-main">
+                                   <div class="nav_title-product">
+                                       <div class="nav_title-product--content">
+                                           <button class="nav-product--btn" id="nav-product--btn-newFilm">
+                                               <a href="javascript:void(0);" class="nav-product--btn-link">Phim mới</a>
+                                           </button>
+                                           <button class="nav-product--btn">
+                                               <a href="javascript:void(0)" class="nav-product--btn-link">Phim lẻ</a>
+                                           </button>
+                                           <button class="nav-product--btn">
+                                               <a href="javascript:void(0)" class="nav-product--btn-link">Phim bộ</a>
+                                           </button>
+                                           <button class="nav-product--btn">
+                                               <a href="javascript:void(0)" class="nav-product--btn-link">Thể loại</a>
+                                           </button>
+                                           <button class="nav-product--btn">
+                                               <a href="javascript:void(0)" class="nav-product--btn-link">Quốc gia</a>
+                                           </button>
+                                           <button class="nav-product--btn">
+                                               <a href="javascript:void(0)" class="nav-product--btn-link">Trailer</a>
+                                           </button>
+                                           <button class="nav-product--btn">
+                                               <a href="javascript:void(0)" class="nav-product--btn-link">Nổi bật</a>
+                                           </button>
+                                       </div>
+                                       <div class="nav_title-product-transfer">
+                                           <i class=" product-transfer--icon-left fa-solid fa-angle-left"></i>
+                                           <span>1 / 14</span>
+                                           <i class=" product-transfer--icon-right  fa-solid fa-angle-right"></i>
+                                       </div>
+                                   </div>
+                               <div class="grid_row" id="display" s>
+
+                               </div>
+                           </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <div style="" id="footer">
+              <div class="grid">
+                  <div class="footer_content">
+                      <div class="img_footer">
+                          <div class="footer_QrAndApps">
+                              <div class="footer_QrAndApps--qr">
+                                  <img src="https://www.luxstay.com/qr-code.png" alt="" id="footer_QrAndApps--qr--img">
+                              </div>
+                              <div class="grid_row">
+                                  <div class="grid_colum-2">
+                                      <a href="https://www.apple.com/app-store/">
+                                          <img src="https://www.luxstay.com/icons/apple-store.svg" alt="">
+                                      </a>
+                                  </div>
+                                  <div class="grid_colum-2">
+                                      <a href="https://appgallery.huawei.com/Featured"> <img src="https://www.luxstay.com/icons/huawei.svg" alt=""></a>
+                                  </div>
+                                  <div class="grid_colum-2">
+                                      <a href="https://play.google.com/store?utm_source=apac_med&utm_medium=hasem&utm_content=Oct0121&utm_campaign=Evergreen&pcampaignid=MKT-EDR-apac-vn-1003227-Med-hasem-py-Evergreen-Oct0121-Text_Search_BKWS-BKWS%7cONSEM_kwid_43700064211720884_creativeid_525822890288_device_c&gclid=Cj0KCQjwpcOTBhCZARIsAEAYLuUY19bpmwnyvp70rbsvyAW7UhJLIjL19xBdvynjW7Xp_1uyNcavmhYaAo8oEALw_wcB&gclsrc=aw.ds">
+                                          <img src="https://www.luxstay.com/icons/google-play.svg" alt="">
+                                      </a>
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="footer-imgAdver">
+                              <img src="https://phimmoichill.net/dev/images/logo.png" alt="" id="footer-imgAdver--img">
+                          </div>
+                      </div>
+                      <div class="footer_content-list">
+                          <div class="grid_row">
+                              <div class="grid_colum-3">
+                                  <div class="footer_content-item">
+                                      <h3 class="footer_content-item--title">Phim Mới</h3>
+                                      <ul class="footer_content-item-list">
+                                          <li class="footer-item--small">
+                                              <a href="" class="footer-item--small--link">Phim chiếu rạp</a></li>
+                                          <li class="footer-item--small">
+                                              <a href="" class="footer-item--small--link">Phim lẻ</a></li>
+                                          <li class="footer-item--small">
+                                              <a href="" class="footer-item--small--link">Phim bộ</a></li>
+                                          <li class="footer-item--small">
+                                              <a href="" class="footer-item--small--link">Phim hành động</a></li>
+                                          <li class="footer-item--small">
+                                              <a href="" class="footer-item--small--link">Phim viễn tưởng</a></li>
+                                          <li class="footer-item--small">
+                                              <a href="" class="footer-item--small--link">Phim tâm lý</a></li>
+                                          <li class="footer-item--small">
+                                              <a href="" class="footer-item--small--link">Phim hài hước</a></li>
+                                      </ul>
+                                  </div>
+                              </div>
+                              <div class="grid_colum-3">
+                                  <div class="footer_content-item">
+                                      <h3 class="footer_content-item--title">Phim Hay</h3>
+                                      <ul class="footer_content-item-list">
+                                          <li class="footer-item--small">
+                                              <a href="" class="footer-item--small--link">Phim MỸ</a></li>
+                                          <li class="footer-item--small">
+                                              <a href="" class="footer-item--small--link">Phim Hàn Quốc</a></li>
+                                          <li class="footer-item--small">
+                                              <a href="" class="footer-item--small--link">Phim Trung Quốc</a></li>
+                                          <li class="footer-item--small">
+                                              <a href="" class="footer-item--small--link">Phim Thái Lan</a></li>
+                                          <li class="footer-item--small">
+                                              <a href="" class="footer-item--small--link">Phim Việt Nam</a></li>
+                                          <li class="footer-item--small">
+                                              <a href="" class="footer-item--small--link">Phim Kinh dị</a></li>
+                                          <li class="footer-item--small">
+                                              <a href="" class="footer-item--small--link">Phim hoạt hình</a></li>
+                                      </ul>
+                                  </div>
+                              </div>
+                              <div class="grid_colum-3">
+                                  <div class="footer_content-item">
+                                      <h3 class="footer_content-item--title">Phim Hót</h3>
+                                      <ul class="footer_content-item-list">
+                                          <li class="footer-item--small">
+                                              <a href="" class="footer-item--small--link">Phimmoi</a></li>
+                                          <li class="footer-item--small">
+                                              <a href="" class="footer-item--small--link">Sitemap</a></li>
+                                      </ul>
+                                  </div>
+                              </div>
+                              <div class="grid_colum-3">
+                                  <div class="footer_content-item">
+                                      <h3 class="footer_content-item--title">Trợ giúp</h3>
+                                      <ul class="footer_content-item-list">
+                                          <li class="footer-item--small">
+                                              <a href="" class="footer-item--small--link">Hỏi đáp</a></li>
+                                          <li class="footer-item--small">
+                                              <a href="" class="footer-item--small--link">Liên hệ</a></li>
+                                          <li class="footer-item--small">
+                                              <a href="" class="footer-item--small--link">Tin tức</a></li>
+                                      </ul>
+                                  </div>
+                              </div>
+                              <div class="grid_colum-3">
+                                  <div class="footer_content-item">
+                                      <h3 class="footer_content-item--title">Thông tin</h3>
+                                      <ul class="footer_content-item-list">
+                                          <li class="footer-item--small">
+                                              <a href="" class="footer-item--small--link">Điều khoản sử dụng</a></li>
+                                          <li class="footer-item--small">
+                                              <a href="" class="footer-item--small--link">Chính sách riêng tư</a></li>
+                                          <li class="footer-item--small">
+                                              <a href="" class="footer-item--small--link">Khiếu nại bản quyền</a></li>
+                                          <li class="footer-item--small">
+                                              <a href="" class="footer-item--small--link">© 2021 PhimChill.Net</a></li>
+                                      </ul>
+                                  </div>
+                              </div>
                           </div>
                       </div>
                   </div>
               </div>
           </div>
       </div>
-      <div class="bai1">bai1</div>
+      <div class="modal" id="modal-signIn$signUp">
+          <div class="modal__layout"></div>
+          <div class="modal__body">
+<!--              Form danng nhap -->
+                <div class="modal__body--signIn">
+                     <div class="content_signIn-form">
+                         <div class="signIn-form-byAccount">
+                             <div class="signIn-form-byAccount--content">
+                                 <h2 class="signIn-form-byAccount--title">
+                                     Create Your Account
+                                 </h2>
+                                     <button class="signIn-faceBook">
+                                         <i class=" signIn-faceBook--icon fa-brands fa-facebook-f"></i>
+                                         <a href="" class="signIn-faceBook--link">Sign in with Facebook</a>
+                                     </button>
+                                     <button class="signIn-Twitter">
+                                         <i class="sign-Twitter--icon fa-brands fa-twitter"></i>
+                                         <a href="" class="signIn-Twitter--link">Sign in with Twitter</a>
+                                     </button>
+                                     <button class="signIn-Google">
+                                         <i class="sign-Google--icon fa-brands fa-google"></i>
+                                         <a href="" class="signIn-Google--link">Sign in with Google</a>
+                                     </button>
+                                     <button class="signIn-Gmail">
+                                         <i class="sign-Gmail--icon fa-solid fa-envelope"></i>
+                                         <a href="" class="signIn-Gmail--link">Sign in with Google</a>
+                                     </button>
+                             </div>
+                         </div>
+                         <div class="signIn-form-byClassical">
+                             <div class="signIn-form-byClassical-content">
+                                 <div class="signIn-form-byClassical-title">
+                                     Or use the classical way
+                                 </div>
+                                 <div class="signIn-form-byClassical--userName">
+                                     <input type="text"  name="" id="byClassical--userName" placeholder="username">
+                                     <i class="byClassical--userName-icon fa-solid fa-user"></i>
+                                 </div>
+                                 <div class="signIn-form-byClassical--email">
+                                     <input type="email"  name="" id="byClassical--email" placeholder="email">
+                                     <i class="byClassical--email-icon fa-solid fa-envelope"></i>
+                                 </div>
+                                 <div class="signIn-form-byClassical-password">
+                                     <input type="password"  name="" id="byClassical--password" placeholder="password">
+                                     <i class="byClassical--password-icon  fa-solid fa-lock"></i>
+                                 </div>
+                                 <div class="signIn-form-byClassical-submit">
+                                     <button type="submit" class="byClassical-submit-btn">SIGN UP</button>
+                                 </div>
+                             </div>
+                         </div>
+                     </div>
+                </div>
+<!--              form dang ky-->
+              <div class="modal__body--signUp">
+                  <div class="modal__body--signUp-close">
+                      <i class="fa-solid fa-xmark"></i>
+                  </div>
+                  <div class="content_signUp-form">
+                      <h2 class="signUp-form-heading">
+                          Sign Up
+                      </h2>
+<!--                      <form action="">-->
+                          <div class="signUp-form-inputDiv" title="Chữ cái đầu viết hoa và không quá ngắn" >
+                              <input  type="text" name=""  class="signUp-form-input" id="signUp-form-userName--input" placeholder="username">
+                              <i class=" signUp-form--icon fa-solid fa-user"></i>
+                          </div>
+                          <div class="signUp-form-inputDiv" title="Có ít nhất 1 ký tự đặc biệt ,in hoa và số">
+                              <input type="password" name="" class="signUp-form-input" id="signUp-form-pass--input" placeholder="password">
+                              <i class="signUp-form--icon fa-solid fa-lock"></i>
+                          </div>
+                          <div class="signUp-form-inputDiv">
+                              <input type="password" name="" class="signUp-form-input" id="signUp-form-passAgain--input" placeholder="password again">
+                              <i class="signUp-form--icon fa-solid fa-lock"></i>
+                          </div>
+                          <div class="signUp-form-inputDiv" title="Đuôi bắt buộc là .com hoặc .vn">
+                              <input type="text" name="" class="signUp-form-input" id="signUp-form-email--input"placeholder="email">
+                              <i class="signUp-form--icon fa-solid fa-envelope"></i>
+                          </div>
+                          <div class="signUp-form-inputDiv" >
+                              <input type="text" name="" class="signUp-form-input" id="signUp-form-number--input"placeholder="number telephone">
+                              <i class="signUp-form--icon fa-solid fa-mobile-screen-button"></i>
+                          </div>
+                          <div class="signUpSelectGender">
+                              <input type="radio" name="gender" id="signUpMan"><span style="opacity: 0.6">Nam</span>
+                              <input type="radio" name="gender" id="signUpWomen"><span style="opacity: 0.6">Nữ</span>
+                          </div>
+                          <p class="signUp-signUp-P">
+                              Bằng cách nhập vào Đăng Ký bạn có đồng ý với
+                              <a href="">Điều khoản chính sách dữ liệu</a>
+                              và
+                              <a href="">chính sách cookie</a>
+                              bạn có thể nhận thông tin của chúng tôi qua SMS vả hủy nhận bất
+                              kỳ lúc nào.
+                          </p>
+                           <div class="signUp-btnS">
+                               <button class="signUp-form-btn google" ><i class="fa-brands fa-google"></i>With Google</button>
+                               <button class="signUp-form-btn facebook" ><i class="fa-brands fa-facebook-f"></i>With FaceBook</button>
+                               <button class="signUp-form-btn sign" id="signUp-form-btn-sign" type="submit">ĐĂNG KÝ</button>
+                           </div>
+                          <div class="clear"></div>
+<!--                      </form>-->
+                  </div>
+              </div>
+          </div>
+      </div>
+      <input type="text" name="" id="valueA_a" value="" placeholder="nhap a">
+      <div id="modalService">
+          <div class="modal__layout-Service"></div>
+          <div class="modal_bodyService">
+              <div id="modal_bodyService--close">
+                  <i class="fa-solid fa-xmark"></i>
+              </div>
+              <div class="form-service--content">
+                  <div class="img_form-service">
+                      <img src="data:image/jpeg;base64,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" alt="" class="form-service--img">
+                  </div>
+                  <h3>Chọn hàng ghế:</h3>
+                  <input type="text" name="" id="rowOfSeatsModal" class="formServiceInputS" placeholder="A - I">
+                  <h3>Chọn số ghế:</h3>
+                  <input type="number" name="" id="SeatsModal" class="formServiceInputS">
+                  <h3>Số lượng vé:</h3>
+                  <input type="number" name="" id="ticketNumberModal" class="formServiceInputS">
+                  <h3>Combo:</h3>
+                  <select id="formServiceSelect">
+                      <option  value='1'>2 bỏng 2 nước coca(189k)</option>
+                      <option  value='2'>1 bỏng 1 nước coca(99k)</option>
+                      <option  value='3'>1 nước coca(39k)</option>
+                      <option  value='4'>1 bỏng (32k)</option>
+                  </select>
+                  <h3 class="formServiceTotalMoney">Tổng tiền: <span style="color: navy" id="totalMoneyNumber" ></span></h3>
+                  <h3 class="formServiceTotalMoneyAfter">Tổng tiền sau giảm: <span style="color: #53ABEE" id="totalMoneyNumberAfter"></span></h3>
+                  <p class="formServicePara">Lưu ý: giảm giá 5% khi bạn đăng ký</p>
+                  <div id="btnSaveFormService">
+
+                  </div>
+                  <div class="clear"></div>
+              </div>
+          </div>
+      </div>
+
 </body>
 </html>
+<script src="./projectCase.js"></script>
+<script src="./checkPassWord.js"></script>
 <script>
-     let inputDate = document.querySelector(".header_input-date");
-     let tem=1;
-     let calendarElement = document.querySelector(".header_input-date--calendar");
-     inputDate.onclick = function (){
-         if(tem===1){
-             calendarElement.classList.add('open')
-             inputDate.style.border= "2px solid #ccc"
-             tem=2;
-         }
-         else if(tem===2){
-             inputDate.style.border= "none"
-             calendarElement.style.display = "none"
-            tem=1;
-         }
-     }
-     let btnsElement = document.querySelectorAll(".calendar_day-btn")
-     for(let btn of btnsElement ){
-         if(btn.innerHTML === "") {
-             btn.style.backgroundColor = " #fff"
-         }
-             else{
-                 btn.addEventListener('click',function (){
-                     btn.style.backgroundColor = "#333"
-                 })
-             }
-         }
+    function cauA(){
+        let a = parseInt(document.getElementById("valueA_a").value);
+        console.log(a)
+    }
 </script>

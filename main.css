@@ -17,6 +17,7 @@ html{
 .header_container{
     height: 100%;
     padding: 0 45px;
+    background-color: #F2F2F2;
 }
 .header_content{
     padding: 5px 0;
@@ -64,6 +65,7 @@ html{
     outline: none;
     font-size: 15px;
     font-weight: 700;
+    background-color: #f2f2f2   ;
 }
 .header_input-search::after{
     content: "";
@@ -82,6 +84,7 @@ html{
     padding-right: 30px;
     position: relative;
     border-radius: 3px;
+    cursor: pointer;
 }
 .header_input-date >i{
     opacity: 0.6;
@@ -102,6 +105,7 @@ html{
     padding:0 20px;
     display: flex;
     align-items: center;
+    position: relative;
 }
 .header_input-quantity>i{
     opacity: 0.6;
@@ -139,6 +143,15 @@ html{
     text-decoration: none;
     color: #000;
 }
+.header_feature-item--link:hover{
+     color: #F65E39;
+}
+#notifyQuantity{
+    position: absolute;
+    left: 10px;
+    bottom: 7px;
+    font-size: 13px;
+}
 .header_feature-final{
     display: flex;
     align-items: center;
@@ -156,12 +169,16 @@ html{
 }
 .header_input-date--calendar{
     position: absolute;
-    top: 100%;
+    top: calc(100% + 15%);
     height: 390px;
     width: 700px;
-    display: flex;
     box-shadow: 0 0 4px rgba(0,0,0,0.25);
     display: none;
+    z-index: 1;
+    background-color: #fff;
+    flex-wrap: wrap;
+    right: -307px;
+    border-radius: 4px;
 }
 .date_calendar--before{
     width: 50%;
@@ -172,6 +189,7 @@ html{
 .calendar_becon--heading{
     display: flex;
     align-items: center;
+    margin-bottom: 5px;
 }
 .calendar_becon--heading-icon{
     padding: 10px;
@@ -180,11 +198,16 @@ html{
 .calendar_becon--heading-title{
     text-align: center;
     flex: 1;
+    font-size: 20px;
+    opacity: 0.9;
 }
 .calendar_becon--day{
     width: 100%;
 }
 .calendar_becon--day-th{
+     font-size: 10px;
+     opacity: 0.5;
+    padding: 5px 0;
 
 }
 .calendar_day-btn{
@@ -199,13 +222,17 @@ html{
 .calender_after--heading{
     display: flex;
     align-items:center;
+    margin-bottom: 5px;
 }
 .calendar_after--heading-icon{
-
+    padding: 10px;
+    background-color: #E6E6E6;
 }
 .calendar_after--heading-title{
     flex: 1;
     text-align: center;
+    font-size: 20px;
+    opacity: 0.9;
 }
 .calendar_after--day{
     width: 100%;
@@ -219,6 +246,474 @@ html{
     border-radius: 2px;
     border: none;
 }
-.open{
-     display: flex;
+.header_input-date--calendar-footer{
+    display: flex;
+    width: 100%;
+    align-items: center;
+}
+.date--calendar-footer-delete{
+    flex: 1;
+    padding-left: 15px;
+}
+.date--calendar-footer-apply{
+    flex: 1;
+    padding-right: 15px;
+    text-align: end;
+    color: #F65E39;
+}
+.header_input-quantity--form{
+    height: 234px;
+    width: 320px;
+    box-shadow: 0 0 4px rgba(0,0,0,0.25);
+    background-color: #fff;
+    position: absolute;
+    top: calc(100% + 15%);
+    display: none;
+}
+.header_input-quantity--form-content{
+    padding: 10px;
+}
+.quantity--form-item{
+    line-height: 40px;
+    display: flex;
+    margin-bottom: 18px;
+    width: 100%;
+}
+.quantity--form-item-title{
+    width: 50%;
+    font-weight: 500;
+}
+.quantity--form-item-change{
+    display: flex;
+    justify-content: space-evenly;
+    width: 50%;
+}
+/*phần thân */
+.first-adver__content-img{
+    width: 1200px;
+    height: 100px;
+}
+.change_increase-btn{
+    width: 40px;
+    font-size: 20px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid #ccc;
+    cursor: pointer;
+}
+.change_reduction-btn{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid #ccc;
+    font-size: 20px;
+    cursor: pointer;
+}
+#content{
+    padding-top: 55px;
+    background-color: #555555;
+    min-height: 1000px;
+}
+.category-content{
+    padding: 0 5px;
+}
+.nav-list{
+    background-color: white;
+    box-shadow: 0 0 4px rgba(0,0,0,0.25);
+    border-radius: 3px;
+}
+.category__heading{
+    line-height: 40px;
+    /*border-bottom:1px solid #ccc;*/
+    margin-left: 13px;
+    font-size: 15px;
+}
+.introduce-p{
+    color: #636363;
+    word-spacing: 5px;
+    margin-bottom: 20px;
+    padding-left: 10px;
+    text-indent: 10px;
+    /*font-size: 14px;*/
+}
+.introduce-p:nth-child(0){
+    margin-top: 20px;
+}
+.introduce-p.first{
+    margin-top: 20px;
+}
+.introduce-p span{
+    font-weight: bold;
+}
+.category__heading-icon{
+      font-size: 13px;
+    margin-right: 2px;
+}
+.category-list{
+    list-style: none;
+}
+.category-list-item{
+    border-bottom:1px solid #ccc;
+}
+.category-list-item:nth-child(1){
+    border-top:1px solid #ccc;
+}
+.category-list-item:hover{
+    background-color: #F2F2F2;
+}
+.category-item--link{
+    line-height: 40px;
+    display: block;
+    text-decoration: none;
+    color: #000;
+    padding-left: 32px;
+    font-size: 14px;
+    font-style: italic;
+}
+.show-product-main{
+    padding: 0 5px;
+    width: 100%;
+}
+.nav_title-product{
+   height: 72px;
+    background: #ccc;
+    border-radius: 3px 3px 0 0 ;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.nav_title-product--content{
+}
+.nav-product--btn{
+    padding: 8px;
+    background: #fff;
+    border: none;
+   margin-left: 10px;
+    border-radius: 3px;
+}
+.nav-product--btn:hover{
+    background-color: #f2f2f2;
+}
+.nav-product--btn-link{
+     text-decoration: none;
+    color: #000;
+}
+.nav_title-product-transfer{
+    margin-right: 10px;
+}
+.nav_title-product-transfer span{
+     margin: 0 5px;
+}
+.product-transfer--icon-left{
+    padding: 10px 15px;
+    background-color: #fff;
+    border-radius: 3px;
+    cursor:pointer;
+}
+.product-transfer--icon-right{
+    padding: 10px 15px;
+    background-color: #fff;
+    border-radius: 3px;
+    cursor:pointer;
+}
+.product-item{
+    padding: 0 5px;
+    margin-bottom: 10px;
+}
+.product-item--content{
+    border: 1px solid #ccc;
+}
+.ticket-item-content{
+    padding-left: 10px;
+    color: #fff;
+}
+.ticket-item--title{
+    color: #44e2ff;
+    font-size: 14px;
+    text-transform: capitalize;
+    font-weight: 500;
+    font-style: italic;
+    height: 35px;
+    display: flex;
+    align-items: center;
+}
+.ticket-item--dateShow{
+    color: #FEEAC8;
+    font-style: italic;
+    display: inline-block;
+    margin-bottom: 8px;
+    font-size: 13px;
+}
+.ticket-item--price-translate{
+    display: inline-block;
+    font-style: italic;
+    text-decoration: line-through;
+    font-size: 13px;
+}
+.ticket-item--pricePromo{
+    display: inline-block;
+    color: #F65E39;
+    font-style: italic;
+}
+#formServiceSelect{
+    outline: none;
+    border: none;
+    box-shadow: 0 0 4px rgb(0 0 0 / 25%);
+    height: 25px;
+}
+.formServicePara{
+    font-size: 10px;
+    margin-top: 7px;
+    font-style: italic;
+}
+.ticket-item-content>span{
+    font-size:13px;
+}
+.ticket-item-price>span{
+    font-size: 14px;
+}
+.ticket-item-content_footer{
+   display: flex;
+    justify-content: space-between;
+}
+.ticket-item-content_footer i{
+    font-size: 12px;
+    margin-top: 4px;
+}
+#ticket-item--history-btn{
+    margin: 7px 0;
+    padding: 3px;
+    background: #ccc;
+    color: #F65E39;
+    border: none;
+    border-radius: 2px;
+}
+.ticket-item-content--btn{
+    margin: 10px 0;
+    font-style: italic;
+    padding: 7px 12px;
+    cursor: pointer;
+   color: grey;
+  background-color: coral;
+    font-weight: 800;
+    border: none;
+    border-radius: 3px;
+}
+.ticket-item-content--link{
+    margin-top: 20px;
+    color: #ccc;
+    padding-right: 10px;
+    font-style: italic;
+    font-size: 13px;
+}
+.modal__body--signUp{
+    width: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    box-shadow: 0 0 4px rgba(0,0,0,0.25);
+}
+.content_signUp-form{
+    padding: 15px 0;
+}
+.signUp-form-heading{
+    margin-bottom: 15px;
+    font-size: 15px;
+}
+.signUp-form-inputDiv{
+    width: 400px;
+    height: 40px;
+    display: flex;
+    box-shadow: 0 0 4px rgba(0,0,0,0.25);
+    margin-bottom: 15px;
+    align-items: center;
+}
+.signUp-form-input{
+    border: none;
+    flex: 1;
+    padding-left: 10px;
+    outline: none;
+}
+.signUp-form--icon{
+   padding-right: 10px;
+    opacity: 0.5;
+}
+.signUpSelectGender{
+    margin-top: 20px;
+}
+#signUpMan{
+    margin-right: 6px;
+}
+#signUpWomen{
+    margin-left: 10px;
+    margin-right: 6px;
+}
+#footer{
+    border-top: 2px solid #F65E39;
+    background-color: #555555;
+}
+.footer_content{
+    padding-top: 40px;
+    display: flex;
+}
+.img_footer{
+   max-width: 50%;
+    border: 1px solid #ccc;
+    padding-top: 30px;
+    background-color: antiquewhite;
+    border-radius: 4px;
+    box-shadow: 0 0 4px rgba(0,0,0.5,0.4);
+}
+.footer-imgAdver{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 200px;
+}
+#footer-imgAdver--img{
+    width: 300px;
+}
+.footer_QrAndApps{
+    display: flex;
+}
+.footer_QrAndApps--qr{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+}
+#footer_QrAndApps--qr--img{
+   height: 154px;
+    width: 154px;
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+.footer_content-list{
+    width: 50%;
+}
+.footer_content-item{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 25px;
+    padding-left: 80px;
+}
+.footer_content-item--title{
+     color: #fff;
+    font-size: 14px;
+    margin-bottom: 6px;
+}
+.footer_content-item-list{
+   list-style-type: none;
+}
+.footer-item--small{
+
+}
+.footer-item--small--link{
+    text-decoration: none;
+    color: #ccc;
+    font-size: 13px;
+    line-height: 20px;
+}
+.footer-item--small--link:hover{
+    color: #F65E39;
+}
+#header_feature-item--Notifi{
+    position: relative;
+}
+#header_messageDialog{
+    position: absolute;
+    top: calc(100% + 50%);
+    right: 12%;
+     width: 370px;
+    min-height: 300px;
+    background-color: #fff;
+    box-shadow: 0 0 4px rgba(0,0,0.5,0.4);
+    border-radius: 3px;
+    animation: FadeIn linear 0.1s;
+    /*animation: growth linear 0.1s;*/
+    display: none;
+}
+#header_messageDialog::after{
+    content: "";
+    position: absolute;
+    border-width: 20px;
+    border-style: solid;
+    border-color: transparent transparent #fff transparent;
+    top: -32px;
+    right: 0;
+}
+.MessageDialogList{
+
+}
+.MessageDialogList-title{
+    padding: 10px;
+    font-size: 12px;
+    font-weight: 500;
+    font-style: italic;
+    opacity: 0.5;
+    border-bottom: 1px solid rgb(0,0,0,0.3);
+}
+.MessageDialog-itemContent{
+    height: 50px;
+    align-items: center;
+    display: flex;
+    background: antiquewhite;
+    padding-left: 10px;
+    border-bottom: 1px solid rgb(0,0,0,0.3);
+}
+.MessageDialog-itemContent:hover{
+    background-color: #FEEAC8;
+    cursor: pointer;
+}
+.img_MessageDialog{
+
+}
+.img_MessageDialog--img{
+     height: 48px;
+     width: 50px;
+    margin-top: 5px;
+}
+.MessageDialog-itemInfor{
+    padding-left: 10px;
+    flex: 1;
+}
+.MessageDialog-itemInfor--title{
+    font-size: 13px;
+    font-style: italic;
+    color: sienna;
+}
+.MessageDialog-itemInfor-sub1{
+   display: flex;
+}
+.MessageDialog-itemInfor-sub-quantity{
+    font-size: 13px;
+    color: blueviolet;
+    margin-right: 30px;
+}
+.MessageDialog-itemInfor-sub-price{
+    font-size: 13px;
+    color: red;
+}
+.MessageDialog-itemInfor-sub-date{
+    font-size: 14px;
+    color: cadetblue;
+}
+.MessageDialog-itemInfor-sub2{
+    display: flex;
+    justify-content: space-between;
+}
+.MessageDialog-itemInfor-delete{
+    margin-right: 10px;
+    font-size: 13px;
+    color: red;
+    text-decoration: underline;
+}
+#ticket-item--history-btn2{
+    padding: 3px 5px;
+    background: cornsilk;
+    margin-right: 10px;
+    border: none;
+    border-radius: 2px;
+    color: brown;
 }

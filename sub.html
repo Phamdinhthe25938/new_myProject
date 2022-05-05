@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" name="" id="inputtttttt" value="">
+<button onclick="hello()">click me</button>
+
+<input type="text" name="" id="valueA_a" value="" placeholder="nhap a">
+<button onclick="cauA()">Cau A</button>
+</body>
+</html>
+<script>
+    // let regExpWeak = /[A-Z]/;
+    // console.log(regExpWeak)
+    // let regExpMedium = /\d+/;
+    // let regExpStrong = /.[!,@,#,$,%,^,&,*,?,_,~,-,(,)]/;
+    // let a= prompt('nhap vao 1 chuoi')
+    // if(regExpStrong.test(a)&&regExpWeak.test(a)){
+    //     console.log('true')
+    // }
+    // else{
+    //     console.log('false')
+    // }
+    //  let input = document.getElementById('input');
+    //  console.log(input.value)
+    //  let regExpWeak = /[A-Z]/;
+    //  let regExpMedium = /\d+/;
+    //  let regExpStrong = /.[!,@,#,$,%,^,&,*,?,_,~,-,(,)]/;
+     function hello(){
+         let inputValue = document.getElementById('inputtttttt').value;
+         console.log(inputValue)
+         // console.log(input)
+         // if(input.value.length<8 && input.value.match(regExpWeak) && input.value.match(regExpStrong)){
+         //     console.log('true')
+         // }
+         // else{
+         //     console.log('false')
+         // }
+     }
+
+    function cauA() {
+        let a = parseInt(document.getElementById("valueA_a").value);
+        console.log(a)
+    }
+</script>
